@@ -12,17 +12,17 @@ importers:
         specifier: ^2.4.3
         version: 2.4.3(svelte@4.1.1)(vite@4.4.7)
       '@tsconfig/svelte':
-        specifier: ^5.0.0
-        version: 5.0.0
+        specifier: ^5.0.4
+        version: 5.0.4
       svelte:
         specifier: ^4.1.1
         version: 4.1.1
       svelte-check:
         specifier: ^3.4.6
-        version: 3.4.6(svelte@4.1.1)
+        version: 3.4.6(postcss@8.4.27)(svelte@4.1.1)
       svelte-preprocess:
         specifier: ^5.0.4
-        version: 5.0.4(svelte@4.1.1)(typescript@5.1.6)
+        version: 5.0.4(postcss@8.4.27)(svelte@4.1.1)(typescript@5.1.6)
       tslib:
         specifier: ^2.6.1
         version: 2.6.1
@@ -219,8 +219,8 @@ packages:
       svelte: ^3.54.0 || ^4.0.0
       vite: ^4.0.0
 
-  '@tsconfig/svelte@5.0.0':
-    resolution: {integrity: sha512-iu5BqFjU0+OcLTNQp7fHe6Bf6zdNeJ9IZjLZMqWLuGzVFm/xx+lm//Tf6koPyRmxo55/Snm6RRQ990n89cRKFw==}
+  '@tsconfig/svelte@5.0.4':
+    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
 
   '@types/estree@1.0.1':
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
@@ -335,6 +335,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -345,6 +346,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -466,6 +468,7 @@ packages:
 
   rimraf@2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup@3.27.0:
@@ -703,7 +706,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  '@sveltejs/vite-plugin-svelte-inspector@1.0.3(@sveltejs/vite-plugin-svelte@2.4.3)(svelte@4.1.1)(vite@4.4.7)':
+  '@sveltejs/vite-plugin-svelte-inspector@1.0.3(@sveltejs/vite-plugin-svelte@2.4.3(svelte@4.1.1)(vite@4.4.7))(svelte@4.1.1)(vite@4.4.7)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 2.4.3(svelte@4.1.1)(vite@4.4.7)
       debug: 4.3.4
@@ -714,7 +717,7 @@ snapshots:
 
   '@sveltejs/vite-plugin-svelte@2.4.3(svelte@4.1.1)(vite@4.4.7)':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 1.0.3(@sveltejs/vite-plugin-svelte@2.4.3)(svelte@4.1.1)(vite@4.4.7)
+      '@sveltejs/vite-plugin-svelte-inspector': 1.0.3(@sveltejs/vite-plugin-svelte@2.4.3(svelte@4.1.1)(vite@4.4.7))(svelte@4.1.1)(vite@4.4.7)
       debug: 4.3.4
       deepmerge: 4.3.1
       kleur: 4.1.5
@@ -726,7 +729,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tsconfig/svelte@5.0.0': {}
+  '@tsconfig/svelte@5.0.4': {}
 
   '@types/estree@1.0.1': {}
 
@@ -1009,7 +1012,7 @@ snapshots:
     dependencies:
       min-indent: 1.0.1
 
-  svelte-check@3.4.6(svelte@4.1.1):
+  svelte-check@3.4.6(postcss@8.4.27)(svelte@4.1.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.18
       chokidar: 3.5.3
@@ -1018,7 +1021,7 @@ snapshots:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.1.1
-      svelte-preprocess: 5.0.4(svelte@4.1.1)(typescript@5.1.6)
+      svelte-preprocess: 5.0.4(postcss@8.4.27)(svelte@4.1.1)(typescript@5.1.6)
       typescript: 5.1.6
     transitivePeerDependencies:
       - '@babel/core'
@@ -1035,7 +1038,7 @@ snapshots:
     dependencies:
       svelte: 4.1.1
 
-  svelte-preprocess@5.0.4(svelte@4.1.1)(typescript@5.1.6):
+  svelte-preprocess@5.0.4(postcss@8.4.27)(svelte@4.1.1)(typescript@5.1.6):
     dependencies:
       '@types/pug': 2.0.6
       detect-indent: 6.1.0
@@ -1043,6 +1046,8 @@ snapshots:
       sorcery: 0.11.0
       strip-indent: 3.0.0
       svelte: 4.1.1
+    optionalDependencies:
+      postcss: 8.4.27
       typescript: 5.1.6
 
   svelte@4.1.1:
@@ -1078,7 +1083,7 @@ snapshots:
       fsevents: 2.3.2
 
   vitefu@0.2.4(vite@4.4.7):
-    dependencies:
+    optionalDependencies:
       vite: 4.4.7
 
   wrappy@1.0.2: {}
