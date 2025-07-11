@@ -1,13 +1,15 @@
 fx_version 'cerulean'
 
-games {"gta5", "rdr3"}
+games {"gta5"}
 
-author "Project Error"
-version '1.0.0'
+author "Maximus Prime"
+repository "https://github.com/Maximus7474/mps-loadscreen"
+version '0.0.0'
 
 lua54 'yes'
+loadscreen_cursor 'yes'
 
-ui_page 'web/build/index.html'
+loadscreen 'web/build/index.html'
 
 server_script "server/**/*"
 
