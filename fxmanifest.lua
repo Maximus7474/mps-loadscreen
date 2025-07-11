@@ -11,6 +11,7 @@ loadscreen_cursor 'yes'
 
 loadscreen 'web/build/index.html'
 
+server_script "config.lua"
 server_script "server/**/*"
 
 files {
