@@ -1,7 +1,4 @@
 <script lang="ts">
-  import { visibility } from '../store/stores';
-  import { fetchNui } from '../utils/fetchNui';
-
   interface ReturnData {
     x: number;
     y: number;
@@ -11,18 +8,7 @@
   let clientData: ReturnData;
 
   const handleClientData = () => {
-    fetchNui('getClientData')
-      .then((returnData) => {
-        clientData = returnData;
-      })
-      .catch((e) => {
-        clientData = { x: 100, y: 100, z: 100 };
-      });
-  };
-
-  const closeDialog = () => {
-    visibility.set(false);
-    fetchNui('hideUI');
+    clientData = { x: 100, y: 100, z: 100 }
   };
 </script>
 
@@ -31,7 +17,6 @@
   <div style="margin: 0.3vh 0;">Player coords: {JSON.stringify(clientData) || ''}</div>
   <div class="btn-wrapper">
     <button on:click={handleClientData}> Get client coords </button>
-    <button on:click={closeDialog}>Close popup</button>
   </div>
   <span>Or press the escape key!</span>
 </div>
